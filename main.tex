@@ -1,0 +1,91 @@
+\documentclass[a4paper, 12pt]{abnt}
+
+\usepackage[brazil]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{dsfont}
+\usepackage{amssymb,amsmath}
+\usepackage{multirow}
+\usepackage[alf]{abntcite}
+\usepackage[pdftex]{color, graphicx}
+\usepackage{colortbl}
+\usepackage{url}
+\usepackage{abnt-alf}
+\usepackage{abntcite}
+\usepackage{algorithm}
+\usepackage{algorithmic}
+
+\floatname{algorithm}{Algoritmo}
+\renewcommand{\algorithmicrequire}{\textbf{Entrada:}}
+\renewcommand{\algorithmicensure}{\textbf{Saída:}}
+\renewcommand{\algorithmicend}{\textbf{fim}}
+\renewcommand{\algorithmicif}{\textbf{se}}
+\renewcommand{\algorithmicthen}{\textbf{então}}
+\renewcommand{\algorithmicelse}{\textbf{senão}}
+\renewcommand{\algorithmicfor}{\textbf{para}}
+\renewcommand{\algorithmicforall}{\textbf{para todo}}
+\renewcommand{\algorithmicdo}{\textbf{faça}}
+\renewcommand{\algorithmicwhile}{\textbf{enquanto}}
+\renewcommand{\algorithmicloop}{\textbf{loop}}
+\renewcommand{\algorithmicrepeat}{\textbf{repetir}}
+\renewcommand{\algorithmicuntil}{\textbf{até que}}
+\renewcommand{\algorithmiccomment}[1]{\% #1}
+
+
+\newcommand{\ignore}[1]{}
+
+
+\hyphenation{PYTHON ou-tros}
+
+
+\begin{document}
+
+	\frenchspacing
+
+	\include{Includes/Capa}
+
+	\include{Includes/FolhaRosto}
+
+	\include{Includes/FolhaAprovacao}
+
+	\include{Includes/Dedicatoria}
+
+	\include{Includes/Agradecimentos}
+
+	\include{Includes/Epigrafe}
+
+	\include{Includes/Resumo}
+
+	\include{Includes/Abstract}
+
+	% Lista de figuras
+% 	\listoffigures
+
+	% Lista de tabelas
+% 	\listoftables
+
+	% Lista de abreviaturas e siglas
+% 	\listadeabreviaturas
+
+	% Lista de símbolos
+% 	\listadesimboenlos
+
+	\sumario
+
+	\include{Capitulos/Introducao}
+
+	\include{Capitulos/Referencial}
+    
+  	\include{Capitulos/Metodologia}
+    
+    \include{Capitulos/Analise}
+    
+    \include{Capitulos/Consideracoes}
+
+	\bibliography{Capitulos/Referencias}
+    
+	\bibliographystyle{abnt-alf}
+
+	\newpage
+
+\end{document}

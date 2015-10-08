@@ -1,0 +1,39 @@
+\chapter{Referencial Teórico}
+
+Este mesmo ambiente de desenvolvimento é extensivamente estudado. Como por exemplo os efeitos das interações sociais dentro do Github [12]. Também podemos citar as análises de Kabbedijk e Jansen [13] no repositório Git de Ruby, resultando na definição de três grandes papéis através da interação de Gems e desenvolvedores. Dabbish et al. [14] analizou a rede social do Github e seus resultados dissertam sobre o visível apoio que o Github provê à colaboração e aprendizado. Robbes et al. [15] por outro lado, estudou a evolução de sistemas de software livre baseado no Efeito Ripple.
+
+Este estudo, mais especificamente, partem dos fundamentos de alguns dos resultados de Margaret-Anne, et al [16]. Desde os primeiros dias da engenharia de software, os desenvolvedores têm usado, inovado, adaptado e adotado as mídias para incrementar as suas interações sociais com outros desenvolvedores. As interações sociais mudaram dramaticamente com a evolução da internet, podendo citar um ápice desta evolução o desenvolvimento do Instagram.
+
+O desenvolvimento e evolução do Instagram foi liderado por um time de duas pessoas, posteriormente quatro, cujas funções basicamente foram encontrar as soluções certas para a sua aplicação específica. Ajudado pela comunidade do Github, onde criaram cerca de 30 repositórios para compartilhar o código durante o processo de desenvolvimento, e um Tumblr, plataforma de blogging onde compartilhavam suas experiências e dificuldades visando sugestões para vencer desafios de escalabilidade e melhorar a arquitetura em sua atual aplicação, o Instagram revolucionou o processo de desenvolvimento de software em termos de agilidade, mão de obra, gerência de inteligência e qualidade de software.
+
+Um fato sobre o processo de desenvolvimento de software na atualidade a respeito dos desenvolvedores de software é que eles dependem da mídia para se comunicar, aprender e colaborar uns com os outros. Aliado à cadência e influência de programadores sociais, escolher uma solução para a sua aplicação pode surgir em diferentes e inúmeros meios.
+
+Nossa abordagem propõe uma solução, instanciada no ambiente de desenvolvimento de Ruby, Gems e Rails, responsável por agregar tais informações para facilitar o desenvolvimento de aplicações necessitadas de um grande espectro de conhecimento permeando características específicas de qualidade de software tais como, entre outras, a escalabilidade.
+
+Para entender melhor o ambiente deste trabalho, nos próximos parágrafos esplanaremos sobres alguns dos conteúdos citados acima tais como: O ambiente de desenvolvimento web utilizando as ferramentas Ruby, Rails e o uso de Gems; Os repositórios remotos de código Github e Rubygems. [17]
+
+Ruby: Ruby é uma linguagem de programação dinamica com uma complexa, porém expressiva, gramática e uma biblioteca de classes central com uma rica e poderosa API. Ruby toma inspirações das linguagens Lisp, Smalltalk e Perl, apesar de fazer uso de uma gramática mais facilmente compreensível para programadores C e Java. Ruby é uma linguagem puramente orientada a objetos, entretanto também é adequeada para estilos de programações variados, tais como, por exemplo, procedural e funcional. Possui poderosas capacidades de metaprogramação e pode ser usada para criar uma linguagem de domínio específico, também conhecidas como DSLs.
+
+Começaremos agora um ínfimo tour pela linguagem Ruby. Como foi anteriormente citado, Ruby é uma linguagem completamente orientada à objetos. Isto significa que todo e qualquer valor é um objeto, até os mais simplórios literais numéricos e os valores true, false e nil (nil é um valor especial que indica a falta de um valor; É versão do Ruby para o famoso null).
+
+Um outro aspecto bastante peculiar desta linguagem, além do fato apresentado de que até inteiros tais como, entre outros, 1 e 2 podem chamar métodos, é a presença de outros objetos que representam blocos de código.
+
+Esses e outros aspectos, tais como uma vasta API além do fácil uso de metaprogramação, apesar da incoveniência gerada pela performance inferior quando comparada a outras linguagens, são fatores importantes na construção e manutenção de sistemas robustos e livres de complexidades no uso, tornando-os amigáveis para os desenvolvedores, em aspectos estruturais.
+
+Gem [18]: Cada Gem possui um nome, uma versão e uma plataforma. Por exemplo, podemos instanciar um exemplo usando a Gem chamada 'rake' [19]. Essa Gem existe na versão 0.8.7 (de Maio, 2009); A plataforma utilizada pela Gem é 'ruby', cuja plataforma é qualquer plataforma que Ruby funcione. 
+
+Plataformas são baseadas em na arquitetura da unidade central de processamento, tipo de sistema operacional e muitas vezes também são influênciadas pela versão do sistema operacional. Instâncias de plataformas podem ser citadas, tais como, entre outras, 'java' e 'x86-mingw32'. As plataformas são responsaveis por indicar o ambiente ruby específico requerido.
+
+Uma Gem é composta pelos seguintes componentes: O código Ruby, a sua respectiva documentação e um arquivo chamado gemspec. Uma Gem deve seguir a mesma estrutura padronizada de organização de código a seguir:
+
+
+
+O diretório lib contem o código da Gem. Os diretórios test ou spec possuem os testes dependendo do framework de teste escolhido pelo criador da Gem
+O Rakefile é um arquivo não obrigatório, utilizado pela Gem rake, criado para automatizar tarefas tais como, entre outras tarefas, rodar os testes, gerar código ou desempenhar outras tarefas. Especificamente, essa Gem possui um diretório, chamado de bin, responsável por guardar os executáveis desta Gem que por sua vez serão carregados para a variável de ambiente PATH assim que a Gem for instalada. A documentação de uma Gem, geralmente é escrita no README com uma sintaxe de linguagem de marcação de texto reconhecida no Github ou nas entrelinhas dos códigos. A documentação é automaticamente instalada conjuntamente com a Gem. Pode-se utilizar também uma das Gems YARD ou, a preferida da maioria das Gems, RDOC.
+
+	O Gemspec é responsável por guardar os metadados da sua aplicação, tais como, entre outros, a lógica da aplicação, os usuários da Gem e quem é responsável por escrevê-la. Este arquivo é um dos mais importantes pois ele ajudará o Bundler a configurar o ambiente sem muita dificuldade.
+
+Uma Gem que já foi citada e vale a pena ser aprofundada é o Bundler. O Bundler, análogo ao Maven da linguagem Java, é uma ferramenta criada para facilitar a instalação e atualização de aplicações e suas gems, resolvendo facilmente as dependências e criando ambientes homogêneos em máquinas diferentes. O Bundler providencia uma ambiente consistente para projetos Ruby, pois o mesmo busca e instala a exata Gem e Versão necessária para o funcionamento da aplicação. O Bundler se denomina uma saída simples para a complicada tarefa de gerenciar as dependências presentes em quaisquer ambientes sendo eles, entre outros, Produção, Homologação ou Desenvolvimento requisitando apenas o comando "bundle install" para configurar todo o ambiente.
+
+É comum a criação de gems com a finalidade de integrar múltiplos projetos. Na atualidade é bastante simples compartilhar uma Gem e a maneira mais difundida de compartilhar é através de um repositório público do Github, pois assim outros podem utilizá-la através do Bundler especificando o repositório. Por praticidade, a comunidade de desenvolvimento Ruby criou um servidor de hospedagem de Gems chamado RubyGems tornando ainda mais prático a divulgação, busca e utilização, pois as Gems irão ficar acessíveis através dos comandos 'gem' no terminal.
+
