@@ -1,15 +1,56 @@
 \chapter{Metodologia}
 
-Este trabalho prevê o desenvolvimento de uma ferramenta para auxiliar discussões sobre tópicos de assuntos variados.
+Este trabalho prevê o desenvolvimento de uma ferramenta para auxiliar discussões sobre tópicos de assuntos variados. Todos os questionários estão escritos por extenso no final do documento no Apêndice A.
 
 \section{Primeiro Questionário: How do you choose between different Ruby Gems}
 
-O primeiro questionário desenvolvido e aplicado foi o questionário intitulado \textit{'How do you choose between different Ruby Gems'}. Seu objetivo era entender como os desenvolvedores Ruby escolhiam entre duas Gems, quando ambas satisfaziam suas necessidades. Também buscamos obter respostas para o que se demonstrava relevante para o desenvolvedor durante o processo de escolha dessa Gem além de perguntar se alguma necessidade durante o processo não era atendida com as atuais ferramentas, sendo elas qualquer uma das ferramentas que auxilie o processo, tais como, entre outras, Google, Stack Overflow e RubyToolbox.
+O primeiro questionário desenvolvido e aplicado foi o questionário intitulado: \textit{'How do you choose between different Ruby Gems'} ou 'Como você escolhe Ruby Gems diferentes'. O público alvo do questionário foi desenvolvedores participantes do GitHub podendo então ser de diferentes nacionalidades, frameworks, linguagens e etc. Por este motivo o questionário foi feito em inglês. Foram obtidas 668 respostas para este questionário.
 
-Dessa forma, buscáva entender fatores responsáveis por evidenciar a qualidade em uma Gem, a ponto de destacar uma Gem em relação a outra no processo de escolha entre Gems, cujas soluções enderessavam os mesmos problemas. Além disso, também buscava entender e mostrar quais os principais locais em que os desenvolvedores procuravam informações e demonstrações sobre Gems. Em particular, verificamos se seria mencionado o RubyToolbox como local de busca ou se seu índice era um fator de decisão na escolha de Gems.
+Seu objetivo era entender como os desenvolvedores Ruby participantes do GitHub escolhiam entre duas Gems, quando ambas satisfaziam suas necessidades. Também buscamos obter respostas para o que se demonstrava relevante para o desenvolvedor durante o processo de escolha dessa Gem além de perguntar se alguma necessidade durante o processo não era atendida com as atuais ferramentas, sendo elas qualquer uma das ferramentas que auxilie o processo, tais como, entre outras, Google, Stack Overflow e Ruby Toolbox.
 
-\section{Utilizando a Github API}
-Suportando a parte específica do primeiro questionário, dados foram coletados e minerados do Github através da Github API\footnote{\url{https://developer.github.com/v3/}}. Os dados coletados se resumem aos projetos que constam em repositórios raízes, ou seja projetos hospedados em repositórios que não são ramificações de outros projetos também hospedados em repositórios, que incluem uma determinada Gem em seu Gemspec, também chamada da especificação da Gem. Dessa forma poderíamos verificar se realmente os projetos seguiam ou pelo menos eram influênciados pelas indicações do RubyToolbox.
+Dessa forma, buscava entender fatores responsáveis por evidenciar a qualidade em uma Gem, a ponto de destacar uma Gem em relação a outra no processo de escolha entre Gems, cujas soluções enderessavam os mesmos problemas. Além disso, também buscava entender e mostrar quais os principais locais em que os desenvolvedores procuravam informações e demonstrações sobre Gems. Em particular, verificou-se que o Ruby Toolbox e as \textit{stars} e \textit{forks} do GitHub foram exaustivamente mencionados como fator de decisão na escolha entre Gems.
+
+Dessa forma o estudo evoluiu para entender e avaliar os índices do Ruby Toolbox do Ruby Toolbox.
+
+\section{Utilizando a GitHub API}
+Suportando o primeiro questionário e em busca da validação dos índices do Ruby Toolbox, dados foram coletados e minerados do GitHub através da GitHub API\footnote{\url{https://developer.github.com/v3/}}. 
+
+Para uma determinada categoria como, entre outras, geradores de pdf ou \textit{uploaders} de arquivos, identifiquei os projetos que importavam gems cuja solução enderessavam problemas desta categoria. Estes projetos constavam em repositórios raízes, ou seja projetos hospedados em repositórios que não são ramificações de outros projetos também hospedados em outros repositórios. Dessa forma avaliei se a maioria dos projetos que constavam no GitHub seguiam as recomendações do Ruby Toolbox.
+
+Desta forma, foi constatado que os projetos presentes no GitHub não seguiam as recomendações do Ruby Toolbox. Levando em consideração os pontos fracos e fortes da ferramenta analisada propus o uso de uma ferramenta com foco mais informativo do que o foco indicativo.
 
 \section{Desenvolvimento e Análise da Ferramenta}
-Nesse meio tempo uma ferramenta e um questionário foi desenvolvidos. A ferramenta responsável por auxiliar a decisão entre duas Gems que endereçam o mesmo problema. Apesar de ter características semelhantes com o RubyToolbox a abordagem é mais informacional e deixa a cargo do usuário de entender os pros e contras das Gems em questão e utilizá-las de acordo com o seu entendimento. O questionário foi feito para suportar a ferramenta e garantir que o seu foco e objetivo sejam os esclarecidos anteriormente.
+
+\subsection{Desenvolvimento da Ferramenta}
+
+Após ser feita esta análise, pôde-se concluir que a ferramenta deve se comprometer com os seguintes objetivos:
+
+\begin{enumerate}
+
+  \item \textbf{Tomada de decisão}. Auxiliar a decisão entre duas ou mais Gems que endereçam o mesmo problema.
+  
+  \item \textbf{Conteúdo informativo}. Auxiliar a apreensão nas dificuldades e facilidades promovidas e estabelecidas por cada uma das Gems em discussão.
+  
+  \item \textbf{Promover Senso Crítico}. Auxiliar o desenvolvimento do senso crítico dos desenvolvedores em relação às opções de soluções e aos problemas que as mesmas enderessam.
+  
+\end{enumerate}
+
+\subsection{Análise da Ferramenta}
+
+O questionário da análise foi intitulado: 'Questionário de Avaliação da Ferramenta' e o mesmo apresenta-se no Apêndice A.
+
+Para análise da ferramenta foi instanciado um ambiente com a discussão de dois desenvolvedores entre duas Gems, Ransack\footnote{\url{https://github.com/activerecord-hackery/ransack/}} e ElasticSearch\footnote{\url{https://github.com/elastic/elasticsearch-ruby}} cujas soluções se endereçam aos mesmos problemas.
+
+O público alvo deste questionário foi limitado e aplicado apenas em alunos da Universidade Federal do Rio Grande do Norte, que já possuiam alguma experiência profissional em Ruby e Rails e que fazem parte da comunidade de Ruby local. Foram obtidas 7 respostas para este questionário.
+
+Com relação a opinião dos usuários questionados, classifiquei-os da seguinte forma:
+
+\begin{enumerate}
+
+  \item Já possuiam conhecimento em uma das Gems citadas
+  \item Possuiam conhecimento em ambas Gems citadas
+  \item Não possuiam conhecimento em ambas Gems citadas
+  
+\end{enumerate}
+
+O questionário se preocupa em relatar o que ocorreu com a opinião de cada um dos três tipos de questionados após o uso da ferramenta.
