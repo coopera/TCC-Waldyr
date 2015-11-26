@@ -12,23 +12,24 @@ Por ter uma fácil acessibilidade e um processo de contribuição eficiente, pro
 
 No universo Rails, o uso das ferramentas citadas transforma o desenvolvimento de uma aplicação em um todo, mudando o processo de escrever todo o código para a procura de soluções ou fragmentos de soluções contidos em Gems, hospedadas em sua grande maioria no GitHub, e integrá-las. Porém ainda existem problemas nessa abordagem de busca e integração de ferramentas, pois com a massificação e enorme acessibilidade cedida pelo GitHub existem uma vastidão de soluções e a tarefa de encontrar a melhor solução ainda é uma tarefa árdua. Em poucas palavras, desenvolvedores tem fácil acesso a todas as soluções, embora sejam muitas e a princípio é difícil definir qual delas é a mais adequada para o seu projeto. Pensando nisso que sites como o Ruby Toolbox\footnote{\url{https://www.ruby-toolbox.com/}} foram criados. São sites que mostram as opções de soluções para um determinado problema classificado entre as categorias listadas e de alguma forma essas soluções possuem um índice calculado a partir de seus dados.
 
-Apesar de útil, essa abordagem de comparação, utilizando índices, acaba sendo tendenciosa. Podemos citar por exemplo o que decorre da acessibilidade e massificação do GitHub, pois para seguir ou fazer uma cópia independente de um repositório requer apenas ter uma conta e um clique em um dos dois botões para seguir ou copiar, podendo desta forma manipular os dados do índice e dar indicações erroneas. Além da massificação, ainda existe também o populismo de certas Gems em relação a outras por conta dos seus contribuidores, pois caso um contribuidor famoso faça uma requisição de atualização em uma determinada Gem, parte de sua popularidade é aderida àquela Gem fazendo pessoas familiares ou simpatizantes deste contribuidor incrementar o índice sem ao menos baixar ou utilizar a Gem. Isso não seria problema, se esses dados apenas indicassem a popularidade de um projeto, porém foi constatado através de um questionário, onde o publico alvo eram os desenvolvedores do GitHub, que esses índices servem como critério de desempate na escolha entre dois projetos. É notável que a popularidade de projetos afete outros projetos de maneira negativa como foi identificado por \cite{michlmayr:quality_problems}, principalmente no quesito de falta de contribuição. 
+Apesar de útil, essa abordagem de comparação, utilizando índices, acaba sendo tendenciosa. Podemos citar por exemplo o que decorre da acessibilidade e massificação do GitHub, pois para seguir ou fazer uma cópia independente de um repositório requer apenas ter uma conta e um clique em um dos dois botões para seguir ou copiar, podendo desta forma manipular os dados do índice e dar indicações errôneas. Além da massificação, ainda existe também o populismo de certas Gems em relação a outras por conta dos seus contribuidores, pois caso um \textit{Social Programmer}\cite{Singer:2013:MAS:2441776.2441791} faça uma requisição de atualização em uma determinada Gem, parte de sua popularidade é aderida àquela Gem fazendo pessoas familiares ou simpatizantes deste contribuidor incrementar o índice sem ao menos baixar ou utilizar a Gem. Isso não seria problema, se esses dados apenas indicassem a popularidade de um projeto, porém foi constatado através de um questionário, onde o publico alvo eram os desenvolvedores do GitHub, que esses índices servem como critério de desempate na escolha entre dois projetos. É notável que a popularidade de projetos afete outros projetos de maneira negativa como foi identificado por \cite{michlmayr:quality_problems}, principalmente no quesito de falta de contribuição. 
 
-Dessa forma nossa abordagem visa facilitar a escolha entre soluções baseado em threads de discussões.
+Dessa forma nossa abordagem, baseada em \textit{threads} de discussões, visa compartilhar o conhecimento entre desenvolvedores analogamente ao que ocorreu em \cite{1997PhDT.......258H}. Tendo como principal consequência, o desenvolvedor melhor informado fazendo melhores escolhas.
 
 \section{Objetivos e Perguntas de Pesquisa}
 
-Este estudo descreve a análise da comunidade e elaboração de tal ferramenta além da sua avaliação. O contexto de sua avaliação é o de uma equipe real de desenvolvimento de software composta desenvolvedores com diferentes habilidades.
+Este estudo descreve a análise da comunidade e elaboração de tal ferramenta além da sua avaliação. O contexto de sua avaliação é o de uma equipe real de desenvolvimento de software composta por desenvolvedores com diferentes habilidades.
 
-O objetivo geral deste trabalho é responder as seguintes perguntas:
+O objetivo geral deste trabalho é responder às seguintes perguntas:
 
 \begin{enumerate}
-  \item Como é feita a escolha entre gems que solucionam os mesmos problems?
-  \item O Ruby Toolbox é bom fator para ajudar nas escolhas?
-  \item O Github é bom fator para ajudar nas escolhas?
-  \item Existe espaço para melhorias nesse processo de escolha?
+  \item O que leva os desenvolvedores a escolher uma Gem em relação a outra?
+  \item O que se demonstra relevante para o desenvolvedor durante o processo de escolha dessa Gem?
+  \item Quais são as ferramentas de indicações mais utilizadas?
+  \item Quão extensivo é o uso das indicações da ferramenta mais utilizada?
+  \item Há espaço para melhorias nesta ferramenta?
 \end{enumerate}
 
 \section{Estrutura do Trabalho}
 
-O Capítulo 2 consiste em realizar uma revisão dos conhecimentos em Ruby, Rails e Github. O capítulo 3 explica em detalhes os procedimentos tomados para a concepção, elaboração e análise da ferramenta. O Capítulo 4 descreve as considerações finais sobre o trabalho.
+O Capítulo 2 consiste em realizar uma revisão dos conhecimentos necessários para o entendimento dos conceitos abordados no estudo. O Capítulo 3 explica em detalhes os procedimentos tomados para a concepção, elaboração e análise da ferramenta. O Capítulo 4 descreve as considerações finais sobre o trabalho.
