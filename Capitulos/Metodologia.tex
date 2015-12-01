@@ -1,56 +1,65 @@
 \chapter{Metodologia}
 
-Este trabalho prevê o desenvolvimento de uma ferramenta para auxiliar discussões sobre tópicos de assuntos variados. Todos os questionários estão presentes no Apêndice A.
+Este trabalho prevê o desenvolvimento de uma ferramenta para auxiliar discussões sobre tópicos de assuntos variados tornando o desenvolvedor mais informado e por conseguinte ajudando-o a fazer uma melhor escolha. Todos os questionários estão presentes no Apêndice A.
 
 \section{Estudo 1: How do you choose between different Ruby Gems}
 
-O primeiro estudo buscou responder as perguntas de pesquisa seguindo os seguintes procedimentos.
+\subsection{Objetivo}
 
-\subsection{Coleta de Dados}
+O primeiro estudo buscou entender e evidenciar o processo dos desenvolvedores durante a escolha de uma Gem em relação à outra. Além disso, este estudo também procurou descobrir o que é relevante para o desenvolvedor durante o processo de escolha e quais são as ferramentas de indicações mais utilizadas e suas falhas.
 
-Distribuiu-se um questionário para desenvolvedores participantes do GitHub podendo ser de diferentes nacionalidades, frameworks, linguagens e etc. Para torná-lo mais acessível, o questionário foi feito em inglês. A amostra foi selecionada utilizando amostragem de conveniência, ou seja, as amostras foram selecionadas baseadas no julgamento do autor. Foram obtidas 668 respostas para este questionário.
+\subsection{Distribuição e Participantes}
 
-\subsection{Análise de Dados}
+O questionário, disponível via Google Forms, foi distribuído via e-mail para uma lista de desenvolvedores de \textit{software} com conta no GitHub. Esta lista foi obtida através de um \textit{script} para minerar os endereços de e-mail de usuários cadastrados no serviço, que concordaram em divulgar seus contatos através do site. Vale mencionar que esta base já tinha sido obtida por um estudo prévio. Estes desenvolvedores eram de diferentes nacionalidades e trabalhavam com diferentes \textit{frameworks}, linguagens e etc. Para torná-lo mais acessível, o questionário foi feito na língua inglesa. A amostra foi selecionada utilizando amostragem de conveniência, ou seja, as amostras foram selecionadas baseadas no julgamento do autor. Foram obtidas 668 respostas para este questionário.
 
-As respostas deveriam deixar claro:
-\begin{enumerate}
-	\item Como os desenvolvedores Ruby escolhiam uma entre duas Gems, quando ambas satisfaziam suas necessidades.
-    \item O que se demonstra relevante para o desenvolvedor durante o processo de escolha dessa Gem.
-    \item Se existe alguma necessidade, durante o processo, não atendida com as atuais ferramentas.
-\end{enumerate}
+\subsection{Processo de Análise}
 
-Após a coleta e análise das respostas, entendeu-se como o processo de escolha ocorria e evidenciou-se os principais fatores responsáveis por ressaltar a qualidade em uma Gem, a ponto de destacar uma Gem em relação a outra neste processo. Além disso, também foi evidenciado as principais ferramentas utilizadas pelos desenvolvedores e suas respectivas falhas. 
+Para processar as respostas, em particular descobrir os principais métodos, ferramentas e qualidades utilizados pelos desenvolvedores, foi utilizado a contagem de palavras nas respostas dos usuários utilizando estruturas de dados e noções de processamento de texto.
 
-Desta forma, respondeu-se todas perguntas de pesquisa, com exceção da quarta pergunta. Logo, caracterizou-se a principal ferramenta como aquela mais citada e realizou-se um novo estudo (Estudo 2) para identificar a extensão do uso de suas indicações e consequentemente responder a quarta e restante pergunta.
+Após a contagem, ocorreu a filtragem por palavras vazias, tais como, \textit{I}, \textit{me}, \textit{at}, \textit{because} e etc. Ademais, também ocorreu a inspeção por palavras-chave. Logo em seguida foi definido, através de inspeção, um limite mínimo de menções para que a palavra tenha significado relevante para o estudo, pois o restos das menções eram muito menos citadas.
 
-Com as necessidades não atendidas e sugestões de melhorias, surgiu-se a ideia para uma ferramenta alternativa.
+\subsection{Resultados}
+
+Com base nas respostas, entendeu-se como o processo de escolha ocorria e evidenciou-se os principais fatores responsáveis por ressaltar a qualidade em uma Gem, a ponto de destacar uma Gem em relação a outra neste processo. Além disso, também foi evidenciado as principais ferramentas utilizadas pelos desenvolvedores e suas respectivas falhas. A parte de análise dos resultados descreve em detalhes os resultados obtidos.
 
 \section{Estudo 2: Qual extensão do uso da principal ferramenta}
 
-A resposta da quarta pergunta de pesquisa foi elaborada após coleta e mineração de dados através da GitHub API\footnote{\url{https://developer.github.com/v3/}}. 
+A resposta da quarta pergunta de pesquisa foi elaborada após coleta e mineração de dados através da API de dados públicos do GitHub\footnote{\url{https://developer.github.com/v3/}}. 
 
 \subsection{Coleta de Dados}
 
-A principal ferramenta categoriza as Gems em 168 diferentes categorias, tais como, entre outras, Qualidade de Código, Geradores de PDF e CSS. Seguindo esta categorização, 10 categorias foram selecionadas ao acaso e buscou-se informações sobre os projetos usuários.
+\subsection{Objetivo}
 
-A fim de minimizar o ruído dos dados minerados e coletar conteúdo com qualidade \cite{Kalliamvakou:2014:PPM:2597073.2597074}, foi levado em consideração apenas repositórios ativos cuja linguagem predominante era Ruby. Além disso, estes projetos constavam em repositórios raízes, ou seja projetos hospedados em repositórios que não são ramificações de outros projetos também hospedados em outros repositórios.
+Baseado no primeiro estudo, foi possível identificar a ferramenta mais mencionada. Dessa forma, o segundo estudo investiga se existiam discrepâncias com relação às indicações desta ferramenta. Por exemplo, o segundo estudo procura se as principais indicações da ferramenta são realmente as soluções mais utilizadas em projetos de \textit{software} livre.
 
-\subsection{Análise de Dados}
+\subsection{Processo de Coleta}
 
-Após análise foi identificado duas discrepâncias com relação às indicações da principal ferramenta.
+A fim de minimizar o ruído dos dados minerados e coletar conteúdo com qualidade \cite{Kalliamvakou:2014:PPM:2597073.2597074}, foi levado em consideração apenas repositórios que foram atualizados no ano que se deu a mineração e cuja linguagem predominante era Ruby. Além disso, estes projetos constavam em repositórios raízes, ou seja projetos hospedados em repositórios que não são ramificações de outros projetos também hospedados em outros repositórios.
 
-\begin{enumerate}
-	\item A quantidade de projetos usuários não corroborava com a indicação
-    \item Os projetos usuários que aparentavam ter mais qualidade, baseados nos argumentos dos entrevistados do Estudo 1, preferiam as Gems com menor indicação.
-\end{enumerate}
+Após determinada a ferramenta mais mencionada, utilizaria-se seu catálogo de Gems e, caso exista, seu sistema de categorização, ou seja, como a ferramenta reconhece, diferencia e classifica as Gems. Caso não exista categorização, um novo estudo seria feito para determinação e designação das Gems às categorias. Dessa forma, seria possível restringir o espaço amostral para apenas 10 categorias afim de não ultrapassar o limite de tráfego de informações da API.
 
-Esse estudo, além de responder a quarta e restante pergunta de pesquisa, fortaleceu a hipótese da necessidade de uma ferramenta alternativa.
+Apesar das precauções, A GitHub API retornava apenas 1000 resultados por busca. Por conseguinte, a busca teve que ser segmentada. Por exemplo, buscava-se pelos \textit{links} de repositórios com as condições acima que foram criados em um determinado dia, iterava-se pelos resultados e em seguida fazia a mesma busca para o dia posterior até o primeiro dia do ano de 2013 (ano que deu-se início ao trabalho).
+
+Após ter os links dos repositórios, foi feito um \textit{script} para baixar o Gemspec dos repositórios dos projetos Ruby e, finalmente, contabilizar quantas vezes as Gems são importadas em todos esses projetos.
+
+\subsection{Processo de Análise}
+
+Com a contabilização em mãos, criou-se gráficos de barra para demonstrar mais facilmente o uso de uma determinada Gem em relação às outras da mesma categoria.
+
+\subsection{Resultados}
+
+Após análise foram identificados discrepâncias com relação às indicações da principal ferramenta.
 
 \section{Desenvolvimento e Análise da Ferramenta}
 
-\subsection{Desenvolvimento da Ferramenta}
+\subsection{Coleta de Requisitos}
 
-Após ser feito o Estudo 1 e 2, pôde-se concluir que necessitava-se de uma ferramenta alternativa. Os principais requisitos foram levantados
+Com base nas falhas das ferramentas de indicações obtidas Estudo 1, pode-se
+elicitar os seguintes requisitos para uma ferramenta que diminua os esforços de escolha entre duas Gems.
+
+\subsection{Requisitos da Ferramenta}
+
+Após ser feito o Estudo 1 e 2, pôde-se concluir que necessitava-se de uma ferramenta alternativa. Os principais requisitos foram levantados:
 
 \begin{enumerate}
 
@@ -62,16 +71,31 @@ Após ser feito o Estudo 1 e 2, pôde-se concluir que necessitava-se de uma ferr
   
 \end{enumerate}
 
-\section{Estudo 3: Análise da Ferramenta Argue}
+Com base nisso, partiu-se para a implementação da ferramenta, denominada Argue
+(Argue, em português: “discutir, argumentar, dar razões ou citar evidências suportando uma ideia"). O
+detalhamento sobre este processo e das funcionalidades apresentadas por esta se encontram
+no próximo capítulo.
 
-O terceiro estudo buscou a validação da ferramenta proposta criando-se um questionário, intitulado: 'Questionário de Avaliação da Ferramenta', e o mesmo apresenta-se no Apêndice A.
+\subsection{Estudo 3: Análise da Ferramenta Argue}
 
-Para análise da ferramenta foi instanciado um ambiente com uma real discussão de dois reais desenvolvedores entre duas Gems, Ransack\footnote{\url{https://github.com/activerecord-hackery/ransack/}} e ElasticSearch\footnote{\url{https://github.com/elastic/elasticsearch-ruby}} cujas soluções se endereçam aos mesmos problemas, ambas auxiliam a criação de buscas.
+\subsection{Objetivo}
 
-\subsection{Coleta de Dados}
+O terceiro estudo buscou a validação da ferramenta proposta criando-se um questionário, intitulado: 'Questionário de Avaliação da Ferramenta'. O mesmo apresenta-se no Apêndice B. O questionário preocupa-se em relatar o que ocorreu com a opinião dos desenvolvedores sobre as Gems em questão após a utilização da ferramenta.
 
-O público alvo deste questionário foi limitado e aplicado apenas em alunos da Empresa Júnior de Engenharia de Software da Universidade Federal do Rio Grande do Norte, que já possuíam alguma experiência profissional em Ruby e Rails e que fazem parte da comunidade de Ruby local. Foram obtidas 7 respostas para este questionário.
+\subsection{Distribuição e Participantes}
 
-\subsection{Análise de Dados}
+O questionário foi aplicado apenas em alunos da equipe de desenvolvimento da Empresa Júnior\footnote{\url{http://en.wikipedia.org/wiki/Junior_enterprise}} 4Soft\footnote{\url{http://www.4softjr.com.br/}}. 
 
-O questionário preocupa-se em relatar o que ocorreu com a opinião de cada um dos questionados sobre as Gems em questão após a utilização da ferramenta. Especificamente, como a ferramenta deve ser mais informativa do que indicativa, procurou observar se ocorreram variações nos posicionamentos dos questionados para um posicionamento onde uma futura utilização dependeriam apenas do contexto e da necessidade do problema que elas iriam resolver.
+A empresa é vinculada aos cursos de Bacharelado em Engenharia de Software e Bacharelado em Tecnologia da Informação da Universidade Federal do Rio Grande do Norte. A empresa é formada exclusivamente por alunos dos cursos citados e atua na área de desenvolvimento de \textit{web}. Por conseguinte, os alunos possuíam alguma experiência profissional em Ruby e Rails e fazem parte da comunidade de Ruby. 
+
+O autor teve acesso ao chat da empresa e através de mensagem privada distribuiu tanto o \textit{link} para discussão quanto o questionário para os participantes. Foram obtidas 7 respostas para este questionário.
+
+\subsection{Processo de Análise}
+
+Antes da distribuição do questionário, foi instanciado um ambiente com uma discussão de dois desenvolvedores, também da 4Soft, entre duas Gems, Ransack\footnote{\url{https://github.com/activerecord-hackery/ransack/}} e ElasticSearch\footnote{\url{https://github.com/elastic/elasticsearch-ruby}}. Ambas Gems implementam funcionalidades responsáveis por auxiliar a criação de buscas de registros em bancos de dados.
+
+Após o término da leitura da discussão os membros da empresa iriam responder o questionário e pela limitação no número de participantes cada resposta foi analisada uma a uma.
+
+\subsection{Resultados}
+
+Foram obtidas respostas para este questionário e então partiu-se para a análise final.

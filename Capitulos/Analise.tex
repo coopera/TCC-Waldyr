@@ -2,9 +2,9 @@
 
 Após o fim dos estudos, iniciou-se a análise das respostas obtidas no questionário aplicado. Todas as perguntas eram opcionais pelo intuito de garantir que apenas respostas de qualidade fossem informadas.
 
-\section{Estudo 1}
+\section{Estudo 1: How do you choose between different Ruby Gems}
 
-Seguem as análises das respostas sobre cada uma das perguntas do questionário `\textit{How do you choose between different Ruby Gems}', com exceção da primeira, sétima e oitava pergunta. 
+Seguem as análises das respostas sobre cada uma das perguntas do questionário `\textit{How do you choose between different Ruby Gems}', com exceção da primeira, sétima e oitava pergunta, pois se tratavam de dados sensíveis dos questionados. 
 
 \subsection{Análise das Respostas}
 
@@ -17,6 +17,12 @@ Seguem as análises das respostas sobre cada uma das perguntas do questionário 
     \item \textbf{Yes, non-professionally}: 402
     \item \textbf{Yes, I contribute to one or more OSS}: 361
   \end{itemize}
+  
+  \begin{figure}[H]
+	\centering
+    \includegraphics[width=15cm]{Imagens/do-you-develop.png}
+    \caption{Do you develop software? (Mark all that apply)}
+  \end{figure}
   
   Percebe-se que todos os desenvolvedores tinham algum nível de conhecimento na área de desenvolvimento de software. Além disso, podemos destacar que 85\% deles possuem experiência profissional. Apenas dois usuários não marcaram nenhuma das alternativas.
   
@@ -31,36 +37,46 @@ Seguem as análises das respostas sobre cada uma das perguntas do questionário 
     \item \textbf{More than 5 years}: 141
   \end{itemize}
   
+  \begin{figure}[H]
+	\centering
+    \includegraphics[width=15cm]{Imagens/how-long.png}
+    \caption{How long have you been developing in Ruby?}
+  \end{figure}
+  
   Percebe-se que os desenvolvedores do GitHub, na época do estudo, estavam iniciando com Ruby com no máximo dois anos de desenvolvimento ou já tinham mais experiência com o ambiente com mais de três anos de desenvolvimento. Apenas quatro usuários não marcaram nenhuma das alternativas.
 
   \subsubsection{When there is more than on gem available that would fulfill your needs - how do you decide which Gem you use?}
   
   Essa pergunta foi a responsável por apresentar os fatores decisivos para a escolha de uma entre duas Gems. Os questionados citaram variadas abordagens onde os fatores decisivos eram indicados por ferramentas ou qualidades.
   
-  Para descobrir os principais métodos, ferramentas e qualidades foi utilizado a contagem de palavras nas respostas dos usuários utilizando estruturas de dados e noções de processamento de texto simplórias.
-  
-  Após a contagem, ocorreu a filtragem e inspeção por palavras-chave. Logo em seguida foi definido um limite mínimo de 19 (dezenove) menções para que a palavra tenha significado relevante para o estudo.
-  
-  Dessa forma foi possível convergir os resultados no seguinte \textit{ranking}:
+  Para descobrir os principais métodos, ferramentas e qualidades foi utilizado a contagem de palavras nas respostas dos usuários como já citado na metodologia. Dessa forma foi possível convergir os resultados no seguinte \textit{ranking}:
   
   As ferramentas mais citadas, respectivamente foram: GitHub, Ruby Toolbox, Google, RubyGems, Stack Overflow, Rails Casts, Twitter, Blog e IRC.
   
   As qualidades mais citadas, respectivamente foram: Documentação, Atividade, Manutenção, Comunidade, Popularidade, Qualidade, Leia-me, Usabilidade, Testes, Funcionalidade, Cobertura.
-  
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=15cm]{Imagens/tools.png}
+  \caption{When there is more than on gem available that would fulfill your needs - how do you decide which Gem you use?}
+\end{figure}
+
+Assim, percebe-se que desenvolvedores usam bastante ferramentas como o GitHub, Ruby Toolbox e Google. Em particular, a única ferramenta especializada de indicação é o Ruby Toolbox.
+
 \newpage
 
-  A seguir as tags utilizadas a fim de localizar as palavras-chave e também as suas menções:
+A seguir as tags utilizadas a fim de localizar as palavras-chave e também as suas menções:
 
 \begin{enumerate}
 \begin{multicols}{2}
 \item github: 203 menções
-\item ruby toolbox: 163 menções
+\item rubytoolbox: 163 menções
 \item google: 132 menções
 \item documentation: 120 menções
 \item issues: 109 menções
 \item rubygems: 85 menções
 \item activity: 84 menções
-\item stars forks: 70 menções
+\item stars,forks: 70 menções
 \item commit: 66 menções
 \item stackoverflow: 63 menções
 \item maintained: 59 menções
@@ -88,9 +104,21 @@ Seguem as análises das respostas sobre cada uma das perguntas do questionário 
 
 \newpage
 
-  \subsubsection{What are the most important things you consider when choosing a Gem?}
-  
-  Usando o processo análogo ao anterior conseguimos o seguinte resultado:
+\subsubsection{What are the most important things you consider when choosing a Gem?}
+
+Usando o processo análogo ao anterior conseguimos o seguinte resultado:
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=15cm]{Imagens/qualities.png}
+  \caption{What are the most important things you consider when choosing a Gem?}
+\end{figure}
+
+Percebe-se que documentação, atividade e manutenção é responsável por mais da metade da fatia de qualidades importantes consideradas durante o processo de escolha. Em contra partida, popularidade leva apenas 6\% dos participantes.
+
+\newpage
+
+A seguir as tags utilizadas a fim de localizar as palavras-chave e também as suas menções:
 
 \begin{enumerate}
 \begin{multicols}{2}
@@ -156,19 +184,28 @@ A seguir exemplos de respostas positivas citadas anteriormente:
 Searching a Gems for it's name is useless.''}
 \end{itemize}
 
-\section{Estudo 2}
+Concluindo a análise do Estudo 1, percebeu-se que a documentação inclusa nos repositórios do GitHub é de extrema importância para qualidade dos projetos. Além disso, percebeu-se que a popularidade é um fator decisivo na escolha de apenas 6\% dos desenvolvedores entrevistados. Como o GitHub não é uma ferramenta especializada na indicação de Gems, ou seja, não possui recomendação baseada em categorias ou funcionalidades, o Estudo 2 foi feito com o seu sucessor o Ruby Toolbox.
 
-Com a conclusão da análise do Estudo 1, percebeu-se que a documentação incluída nos repositórios do GitHub é de extrema importância para qualidade dos projetos. Como o GitHub não indica Gems, foi feito um estudo com o seu sucessor o Ruby Toolbox.
+\section{Estudo 2: Qual extensão do uso da principal ferramenta}
 
-O Ruby Toolbox usa os índices do GitHub também citados como \textit{stars}, \textit{forks} e, de uma forma mais geral, popularidade dos projetos. Desta forma, foi feito a mineração e a então análise dos dados.
+O Ruby Toolbox usa os índices do GitHub tais como, entre outros, \textit{stars}, \textit{forks} e, de uma forma mais geral, a popularidade dos projetos. Desta forma, foi feito a mineração e então análise dos dados.
 
-O comparativo entre os resultados obtidos está apresentado separado por categorias no Apêndice B. É visível a discrepância das indicações do Ruby Toolbox, com relação ao real uso das Gems, em todas as categorias estudadas exceto nas categorias de \textit{Frameworks} de Teste e Construtores de Formulários.
+O comparativo entre os resultados obtidos está apresentado separado por categorias no Apêndice B. É visível a discrepância das indicações do Ruby Toolbox, com relação ao real uso das Gems, em todas as categorias estudadas exceto nas categorias de \textit{Frameworks} de Teste e Construtores de Formulários. Por exemplo:
 
-\section{Estudo 3}
+\begin{figure}[H]
+\centering
+\includegraphics[width=15cm]{Imagens/gems-3.jpg}
+\end{figure}
 
-Cada participante foi anonimado. Toda referência a um participante será feita na forma de P\# onde \# se refere ao identificador do participante.
+Para a categoria de Clientes HTTP, o Ruby Toolbox indicava respectivamente Rest-client, HTTParty e Farady. Perceba pelo gráfico que HTTParty é amplamente mais utilizado que as outras duas opções. Além disso entre o HTTParty e o Rest-client tem ainda quase duas outras opções.
+
+\section{Estudo 3: Análise da Ferramenta Argue}
+
+Nesta análise cada participante foi anonimado afim de preservar a sua identidade. Toda referência a um participante será feita na forma de P\# onde \# se refere ao identificador do participante.
 
 \subsection{Análise das Respostas}
+
+Segue uma análise detalhada sobre cada uma das respostas feitas.
 
 \subsubsection{Você conhece alguma das gems mencionadas? Comente o que você conhecia sobre cada Gem.}
 
@@ -223,5 +260,3 @@ Após o uso da ferramenta 72\% dos questionados afirmaram que, dependendo do con
   \item P6: \textit{``É uma ferramenta interessante, a comparação entre ferramentas, frameworks, etc. é um assunto sempre recorrente na área de software. Acredito que um ponto interessante seria destacar melhor os pontos positivos e negativos que cada pessoa possui sobre os objetos de comparação.''}
   \item P7: \textit{``Ficou interessante, dá pra se abordar vários prós e contras de diversas ferramentas.''}
 \end{itemize}
-
-\section{Conclusões Obtidas e Respostas das Perguntas de Pesquisa}
