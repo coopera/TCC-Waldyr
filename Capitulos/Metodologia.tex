@@ -18,21 +18,17 @@ Para processar as respostas, em particular descobrir os principais métodos, fer
 
 Após a contagem, ocorreu a filtragem por palavras vazias, tais como, \textit{I}, \textit{me}, \textit{at}, \textit{because} e etc. Ademais, também ocorreu a inspeção por palavras-chave. Logo em seguida foi definido, através de inspeção, um limite mínimo de menções para que a palavra tenha significado relevante para o estudo, pois o restos das menções eram muito menos citadas.
 
-\subsection{Resultados}
-
 Com base nas respostas, entendeu-se como o processo de escolha ocorria e evidenciou-se os principais fatores responsáveis por ressaltar a qualidade em uma Gem, a ponto de destacar uma Gem em relação a outra neste processo. Além disso, também foi evidenciado as principais ferramentas utilizadas pelos desenvolvedores e suas respectivas falhas. A parte de análise dos resultados descreve em detalhes os resultados obtidos.
 
 \section{Estudo 2: Qual extensão do uso da principal ferramenta}
 
 A resposta da quarta pergunta de pesquisa foi elaborada após coleta e mineração de dados através da API de dados públicos do GitHub\footnote{\url{https://developer.github.com/v3/}}. 
 
-\subsection{Coleta de Dados}
-
 \subsection{Objetivo}
 
 Baseado no primeiro estudo, foi possível identificar a ferramenta mais mencionada. Dessa forma, o segundo estudo investiga se existiam discrepâncias com relação às indicações desta ferramenta. Por exemplo, o segundo estudo procura se as principais indicações da ferramenta são realmente as soluções mais utilizadas em projetos de \textit{software} livre.
 
-\subsection{Processo de Coleta}
+\subsection{Coleta de Dados}
 
 A fim de minimizar o ruído dos dados minerados e coletar conteúdo com qualidade \cite{Kalliamvakou:2014:PPM:2597073.2597074}, foi levado em consideração apenas repositórios que foram atualizados no ano que se deu a mineração e cuja linguagem predominante era Ruby. Além disso, estes projetos constavam em repositórios raízes, ou seja projetos hospedados em repositórios que não são ramificações de outros projetos também hospedados em outros repositórios.
 
@@ -46,8 +42,6 @@ Após ter os links dos repositórios, foi feito um \textit{script} para baixar o
 
 Com a contabilização em mãos, criou-se gráficos de barra para demonstrar mais facilmente o uso de uma determinada Gem em relação às outras da mesma categoria.
 
-\subsection{Resultados}
-
 Após análise foram identificados discrepâncias com relação às indicações da principal ferramenta.
 
 \section{Desenvolvimento e Análise da Ferramenta}
@@ -56,8 +50,6 @@ Após análise foram identificados discrepâncias com relação às indicações
 
 Com base nas falhas das ferramentas de indicações obtidas Estudo 1, pode-se
 elicitar os seguintes requisitos para uma ferramenta que diminua os esforços de escolha entre duas Gems.
-
-\subsection{Requisitos da Ferramenta}
 
 Após ser feito o Estudo 1 e 2, pôde-se concluir que necessitava-se de uma ferramenta alternativa. Os principais requisitos foram levantados:
 
@@ -95,7 +87,5 @@ O autor teve acesso ao chat da empresa e através de mensagem privada distribuiu
 Antes da distribuição do questionário, foi instanciado um ambiente com uma discussão de dois desenvolvedores, também da 4Soft, entre duas Gems, Ransack\footnote{\url{https://github.com/activerecord-hackery/ransack/}} e ElasticSearch\footnote{\url{https://github.com/elastic/elasticsearch-ruby}}. Ambas Gems implementam funcionalidades responsáveis por auxiliar a criação de buscas de registros em bancos de dados.
 
 Após o término da leitura da discussão os membros da empresa iriam responder o questionário e pela limitação no número de participantes cada resposta foi analisada uma a uma.
-
-\subsection{Resultados}
 
 Foram obtidas respostas para este questionário e então partiu-se para a análise final.
